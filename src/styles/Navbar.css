@@ -60,3 +60,14 @@
     margin-bottom: 20px;
     font-size: 24px; 
   }
+  
+  .logoutdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logout {
+    margin-top: 50px;
+    max-width: 200px;
+  }
