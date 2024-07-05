@@ -1,30 +1,84 @@
 * {
   box-sizing: border-box;
-  font-family: "Vollkorn", helvetica;
 }
 
 body {
   height: auto;
   background-color: #cdd3d3;
-  background-size: fill; 
+  background-size: fill;
+  margin: 0;
 }
 
 .page-wrapper {
   display: flex;
   background-color: white;
-  flex-direction: column;
   height: 800px;
   width: 1500px;
-  margin: 0px 60px 0px 60px;
+  margin: 0px 60px;
   padding: 20px;
 }
 
-a:hover {
+.navbar {
+  display: flex;
+  flex-direction: column; 
+  height: 100%;
+  width: 50px;
+  padding-top: 20px;
+  padding-left: 10px;
+  border-right: 5px solid #0b0bf9;
+  overflow: hidden;
+  background-color: #0b0bf9;
+  transition: width 0.5s;
+}
+
+.navbar.expanded {
+  background-color: #ffffff;
+  width: 350px;
+}
+
+.navbar.collapsed {
+  width: 50px; 
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: column; 
+  height: 100%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column; 
+  font-size: 16px; 
+}
+
+.buttons a {
+  margin: 10px; 
+  color: black;
+  background-color: yellow;
+  padding: 5px 10px;
+  text-decoration: none; 
+}
+
+.buttons a:hover {
+  background-color: lightgrey;
   color: #0b0bf9;
 }
 
-.navbar {
-  margin-bottom: 50px;
-  border-bottom: 5px solid #0b0bf9;
+.navbar-toggle {
+  display: flex;
+  align-items: center;
+  background-color: #0b0bf9;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 24px; 
 }
 
+.content {
+  padding-left: 50px;
+}

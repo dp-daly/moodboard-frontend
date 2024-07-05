@@ -33,7 +33,7 @@ function Signup() {
         }
     }
 
-    return <div className="section">
+    return <div className="content">
         <div className="container">
             <form onSubmit={handleSubmit}>
                 <div className="field">

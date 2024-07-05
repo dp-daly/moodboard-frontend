@@ -2,7 +2,9 @@ import '../App.css'
 
 function Index() {
 
-    return
+    return <div className="content">
+        <p>Hello world!</p>
+    </div>
 
 }
 
