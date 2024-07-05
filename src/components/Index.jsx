@@ -2,7 +2,7 @@ import '../App.css'
 
 function Index() {
 
-    return <div className="content">
+    return <div className="container">
         <p>Hello world!</p>
     </div>
 

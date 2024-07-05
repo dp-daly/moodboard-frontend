@@ -32,8 +32,7 @@ export default function Signin() {
         }
     }
 
-    return <div className="content">
-        <div className="container">
+    return <div className="container">
             <form onSubmit={handleSubmit}>
                 <div className="field">
                     <label className="label">Email</label>
@@ -77,5 +76,4 @@ export default function Signin() {
                 toastStyle={{ backgroundColor: "black", color: "white" }}
             />
         </div>
-    </div>
 }

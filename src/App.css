@@ -25,9 +25,9 @@ body {
   width: 50px;
   padding-top: 20px;
   padding-left: 10px;
-  border-right: 5px solid #0b0bf9;
+  border-right: 5px solid black;
   overflow: hidden;
-  background-color: #0b0bf9;
+  background-color: black;
   transition: width 0.5s;
 }
 
@@ -62,13 +62,15 @@ body {
 
 .buttons a:hover {
   background-color: lightgrey;
-  color: #0b0bf9;
+  color: hotpink;
+  text-decoration: underline;
+  font-style: italic;
 }
 
 .navbar-toggle {
   display: flex;
   align-items: center;
-  background-color: #0b0bf9;
+  background-color: black;
   width: 30px;
   height: 30px;
   color: #ffffff;
@@ -79,6 +81,26 @@ body {
   font-size: 24px; 
 }
 
-.content {
-  padding-left: 50px;
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto; 
 }
+
+.headerh1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  max-width: 290px;
+  background-color: yellow;
+  color: black;
+  padding-left: 50px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 70px;
+  cursor: pointer;
+}
+
+.container {
+  margin-left: 50px;
+}
+

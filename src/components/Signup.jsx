@@ -33,8 +33,7 @@ function Signup() {
         }
     }
 
-    return <div className="content">
-        <div className="container">
+    return <div className="container">
             <form onSubmit={handleSubmit}>
                 <div className="field">
                     <label className="label">Preferred name</label>
@@ -117,7 +116,6 @@ function Signup() {
                 toastStyle={{ backgroundColor: "black", color: "white" }}
             />
         </div>
-    </div>
 
 }
 
