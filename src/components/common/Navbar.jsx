@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../../styles/App.css'
+import '../../styles/Navbar.css'
 
 function Navbar() {
     const [isExpanded, setIsExpanded] = useState(true); 
@@ -20,7 +21,7 @@ function Navbar() {
                     <div className="navbar-item">
                         <div className="buttons">
                             <Link to="/" className="button">HOME</Link>
-                            <Link to="/signup" className="button">REGISTER</Link>
+                            <Link to="/register" className="button">REGISTER</Link>
                             <Link to="/signin" className="button">SIGN IN</Link>
                             <Link to="/create" className="button">CREATE BOARD</Link>
                         </div>

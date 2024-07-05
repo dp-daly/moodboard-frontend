@@ -1,14 +1,14 @@
-import './App.css'
+import './styles/App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Index from './components/Index'
-import Signup from './components/Signup'
-import CreateBoard from './components/CreateBoard'
-import Signin from './components/Signin'
-import Moodboard from './components/Moodboard'
-import ShowObject from './components/ShowObject'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Navbar from './components/common/Navbar'
+import Index from './components/common/Index'
+import Signup from './components/auth/Signup'
+import CreateBoard from './components/moodboard/CreateBoard'
+import Signin from './components/auth/Signin'
+import Moodboard from './components/moodboard/Moodboard'
+import ShowObject from './components/moodboard/ShowObject'
+import Header from './components/common/Header'
+import Footer from './components/common/Footer'
 
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
         </div>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/signup" element={<Signup />} />
+            <Route path="/register" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/create" element={<CreateBoard />} />
             <Route path="/:userId/:boardId" element={<Moodboard />} />
