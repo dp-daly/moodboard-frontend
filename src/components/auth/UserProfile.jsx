@@ -2,9 +2,11 @@ import '../../styles/App.css';
 import axios from 'axios';
 import { getPayload } from '../../lib/auth.js'
 import { useState, useEffect } from 'react'
-
+import { Link, useLocation } from 'react-router-dom';
 
 function UserProfile() {
+
+    const location = useLocation();
 
     const [moodboards, setMoodboards] = useState([]);
 
@@ -33,7 +35,9 @@ function UserProfile() {
                 <ul>
                     {moodboards.map(board => (
                         <li key={board.id}>
+                            <Link to={`${location.pathname}/${board.id}`}>
                             <h3>{board.title}</h3>
+                            </Link>
                         </li>
                     ))}
                 </ul>

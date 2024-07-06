@@ -12,6 +12,7 @@ body {
 .page-wrapper {
   display: flex;
   background-color: white;
+  font-family: helvetica;
   height: 800px;
   width: 1500px;
   margin: 0px 60px;
@@ -27,7 +28,7 @@ body {
 .headerh1 {
   font-size: 3.2em;
   line-height: 1.1;
-  max-width: 295px;
+  max-width: 305px;
   background-color: yellow;
   color: black;
   padding-left: 50px;
