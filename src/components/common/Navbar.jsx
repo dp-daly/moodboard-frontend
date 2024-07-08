@@ -37,7 +37,7 @@ function Navbar() {
     return (
         <nav className={`navbar ${isExpanded ? 'expanded' : 'collapsed'}`}>
             <div className="navbar-toggle" onClick={toggleNavbar}>
-                {isExpanded ? '-' : '+'}
+                {isExpanded ? ' -' : '+'}
             </div>
             <div className="navbar-menu">
                 <Link to="/"><div className="logo"></div></Link>

@@ -1,0 +1,66 @@
+#container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: auto;
+    border-radius: 25px;
+    color: white;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20vh;
+    padding: 10px;
+}
+
+#img-placeholder {
+    width: 20vh;
+    height: 20vh;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+#card-footer {
+    margin: 15px 0px 0px 0px;
+    font-size: 14px;
+    height: auto;
+    text-align: center;
+}
+
+#artist-title {
+    height: 25px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#card-title {
+    height: 30px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+  
+#card-footer * {
+    margin-top: auto;
+  }
+
+#page {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 95%; 
+}
+
+#search {
+    width: 800px;
+}

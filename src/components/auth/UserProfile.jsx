@@ -11,10 +11,10 @@ function UserProfile() {
     const [moodboards, setMoodboards] = useState([]);
 
     useEffect(() => {
-        getUserBoards()
+        fetchUserBoards()
     }, [])
 
-    async function getUserBoards() {
+    async function fetchUserBoards() {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.get('http://localhost:8000/api/boards/', {
