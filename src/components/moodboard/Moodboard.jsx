@@ -20,7 +20,7 @@ function Moodboard() {
     }
 
     return (
-        <div>
+        <div className="container">
             {moodboard && (
                 <div>
                     <h2>{moodboard.title}</h2>

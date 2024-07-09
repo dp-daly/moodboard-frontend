@@ -10,7 +10,8 @@
     background-color: white;
     color: black;
     overflow: hidden;
-    border: solid 2px rgb(43, 154, 113);
+    border: solid 6px rgb(43, 154, 113);
+    border-radius: 8px;
   }
   
   .sidebar.expanded {
@@ -32,6 +33,15 @@
   
   .sidebar-contents p {
     margin: 0;
+  }
+
+  #message {
+    width: 100%;
+    font-family: "DM Serif Display", Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: gold;
+    font-size: 18px;
+    border-radius: 8px;
   }
   
   .sidebar-contents img {

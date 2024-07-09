@@ -14,7 +14,9 @@ function AddToBoard({ selectedArtwork, moodboards, selectedBoard, setSelectedBoa
           X
         </button>
         </div>
+        <div id="message">
         <h3>Would you like to the add {selectedArtwork.title} to a board?</h3>
+        </div>
         <img src={`https://www.artic.edu/iiif/2/${selectedArtwork.image}/full/843,/0/default.jpg`} alt={selectedArtwork.title} />
         <div className="board-buttons">
         <select id="selector" value={selectedBoard} onChange={(e) => setSelectedBoard(e.target.value)}>
