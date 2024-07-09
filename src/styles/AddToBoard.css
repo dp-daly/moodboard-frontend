@@ -7,13 +7,15 @@
     right: 0;
     height: 100%;
     width: 350px;
-    background-color: #070000;
-    color: gold;
+    background-color: white;
+    color: black;
     overflow: hidden;
+    border: solid 2px rgb(43, 154, 113);
   }
   
   .sidebar.expanded {
     width: 350px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .sidebar-contents {
@@ -58,7 +60,7 @@
   }
 
   .add-to-moodboard.active {
-    border: solid 2px #24a0ed;
+    border: solid 2px rgb(43, 154, 113);;
     color: black;
   }
   

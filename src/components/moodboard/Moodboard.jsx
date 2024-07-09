@@ -1,41 +1,45 @@
-import '../../styles/App.css'
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import axios from 'axios'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Moodboard() {
-    const { boardId } = useParams();
-    const [artObjects, setArtObjects] = useState([]);
-    //Just creating form for testing purposes
-    const [newArtObject, setNewArtObject] = useState({
-        title: '',
-        artist: '',
-        api_object: '',
-        user_text: ''
-    });
+    const [moodboard, setMoodboard] = useState(null);
+    // TODO: Add useparams logic
+    const boardId = 2;
 
-    //! the board will need a fetch function for its own particular art objects
+    useEffect(() => {
+        fetchMoodboard();
+    }, [boardId]);
 
-    // useEffect(() => {
-    //     fetchArtObjects();
-    // }, []);
+    async function fetchMoodboard() {
+        try {
+            const response = await axios.get(`http://localhost:8000/api/boards/${boardId}/`);
+            setMoodboard(response.data);
+        } catch (error) {
+            console.log('Error fetching moodboard:', error.message);
+        }
+    }
 
-    // async function fetchArtObjects() {
-    //     try {
-    //         const token = localStorage.getItem('token');
-    //         const response = await axios.get('http://localhost:8000/api/artobjects/', {
-    //             headers: {
-    //                 Authorization: `Bearer ${token}`
-    //             }
-    //         });
-    //         setArtObjects(response.data);
-    //     } catch (error) {
-    //         console.error('Error fetching art objects:', error);
-    //     }
-    // }
+    return (
+        <div>
+            {moodboard && (
+                <div>
+                    <h2>{moodboard.title}</h2>
+                    <p>{moodboard.description}</p>
 
-    return 
-    
+                    <h3>Art Objects:</h3>
+                    <ul>
+                        {moodboard.artobjects && moodboard.artobjects.map((artobject) => (
+                            <li key={artobject.id}>
+                                <h4>{artobject.title}</h4>
+                                <p>Artist: {artobject.artist}</p>
+                                <img src={artobject.img} alt={artobject.title} style={{ maxWidth: '200px' }} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </div>
+    );
 }
 
 export default Moodboard;

@@ -33,11 +33,11 @@ export default function HorizontalNavbar() {
                 <h1 className = "headerh1">ArtBoards</h1>
                     <div className="navbar-items">
                         <div className="buttons">
-                            {isLoggedIn && <Link to="/" className="button">Home</Link>}
+                            <Link to="/" className="button">Home</Link>
                             {!isLoggedIn && <Link to="/register" className="button">Register</Link>}
                             {!isLoggedIn && <Link to="/signin" className="button">Sign in</Link>}
-                            {isLoggedIn && <Link to={`/${userId}`} className="button">Your profile</Link>}
-                            {isLoggedIn && <Link to="/create" className="button">Create a new board</Link>}
+                            {isLoggedIn && <Link to={`/${userId}`} className="button">Your boards</Link>}
+                            {isLoggedIn && <Link to="/create" className="button" id="create">Create a new board</Link>}
                             <div className="logoutdiv">{isLoggedIn && <button className="logout" onClick={logout}>Sign out</button>}</div>
                         </div>
                     </div>

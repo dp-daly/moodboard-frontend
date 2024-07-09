@@ -60,7 +60,7 @@ const Index = () => {
 
   async function handleAddToMoodboard() {
     if (!selectedBoard || !selectedArtwork) {
-      toast.error('Please select both artwork and a moodboard');
+      toast.error('Please select both an artwork and a board');
       return;
     }
 
@@ -80,7 +80,7 @@ const Index = () => {
           },
         }
       );
-      toast.success('Added to moodboard successfully!');
+      toast.success('Successfully added to your board!');
     } catch (error) {
       console.error('Error adding to moodboard:', error);
       toast.error('Failed to add to moodboard');
@@ -160,10 +160,9 @@ const Index = () => {
         <h2>Welcome to ArtBoards</h2>
       </div>
       <div id="howto">
-        <h3 id="subheader">How do I use this website?</h3>
         <ul>
-          <li>Register for an account and create a board.</li>
-          <li>Enter your chosen search term.</li>
+          <li>Sign in or register your account and create a board.</li>
+          <li>Return to this page and enter your chosen search term.</li>
           <li>You'll see live results from the Art Institute of Chicago's online collection.</li>
           <li>See up to 8 results from the collection per page. Click 'next' above or below the gallery to see the next 8 results.</li>
           <li>Click the '+' button to select an item and choose which board you'd like to add it to.</li>
