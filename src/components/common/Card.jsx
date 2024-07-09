@@ -13,4 +13,4 @@ const Card = ({ artist, title, image, handleSelectedArtwork}) => {
     )
     }
     
-    export default Card
+    export default Card;

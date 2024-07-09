@@ -6,4 +6,4 @@ function ShowObject() {
 
 }
 
-export default ShowObject
+export default ShowObject;

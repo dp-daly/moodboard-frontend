@@ -1,7 +1,7 @@
 const Page = ({ page, total, updatePage }) => {
 
     return (
-    <div id="page">
+    <div className="page">
     <button disabled={page === 1} onClick={() => updatePage('previous')}>Previous</button>
     Page {page} of {total}
     <button onClick={() => updatePage('next')}>Next</button>
@@ -9,4 +9,4 @@ const Page = ({ page, total, updatePage }) => {
     )
 }
 
-export default Page
+export default Page;

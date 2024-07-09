@@ -1,6 +1,6 @@
 import './styles/App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/common/Navbar';
+import HorizontalNavbar from './components/common/HorizontalNavbar';
 import Index from './components/common/Index';
 import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
@@ -8,16 +8,14 @@ import UserProfile from './components/auth/UserProfile';
 import CreateBoard from './components/moodboard/CreateBoard';
 import Moodboard from './components/moodboard/Moodboard';
 import ShowObject from './components/moodboard/ShowObject';
-import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 
 const App = () => {
   return (
     <Router>
       <div className="page-wrapper">
-        <Navbar />
         <div className="content-wrapper">
-          <Header />
+          <HorizontalNavbar />
           <div className="content">
             <Routes>
               <Route path="/" element={<Index />} />

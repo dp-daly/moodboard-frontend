@@ -1,11 +1,44 @@
-#container {
+h2 {
+    font-size: 30px;
+}
+
+#howto {
+    border-bottom: dotted gold 4px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+}
+
+#subheader {
+    font-style: italic;
+}
+
+#search {
+    width: 800px;
+    height: 30px;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+}
+
+#api-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#api-results {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    gap: 20px;
     width: auto;
     border-radius: 25px;
-    color: white;
-    margin: 20px;
+    color: black;
+    background-color: white;
     padding-top: 20px;
 }
 
@@ -13,13 +46,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20vh;
+    width: 38vh;
     padding: 10px;
 }
 
+.add-button {
+    background-color: gold;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
 #img-placeholder {
-    width: 20vh;
-    height: 20vh;
+    width: 35vh;
+    height: 35vh;
     background-color: gray;
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +92,7 @@
     margin-top: auto;
   }
 
-#page {
+.page {
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -61,6 +100,6 @@
     width: 95%; 
 }
 
-#search {
-    width: 800px;
+#page-bottom {
+    margin-bottom: 50px;
 }
