@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Moodboard() {
     const [moodboard, setMoodboard] = useState(null);
-    // TODO: Add useparams logic
-    const boardId = 2;
+    const { boardId } = useParams()
 
     useEffect(() => {
         fetchMoodboard();
@@ -26,6 +26,7 @@ function Moodboard() {
                     <h2>{moodboard.title}</h2>
                     <p>{moodboard.description}</p>
 
+                    <Link to={`${location.pathname}/edit`} className="button" id="create">Edit Board</Link>
                     <h3>Art Objects:</h3>
                     <ul>
                         {moodboard.artobjects && moodboard.artobjects.map((artobject) => (

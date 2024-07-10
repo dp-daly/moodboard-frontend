@@ -7,10 +7,10 @@
     right: 0;
     height: 100%;
     width: 350px;
-    background-color: white;
+    background-color: black;
     color: black;
     overflow: hidden;
-    border: solid 6px rgb(43, 154, 113);
+    border: solid 6px gold; 
     border-radius: 8px;
   }
   
@@ -70,7 +70,7 @@
   }
 
   .add-to-moodboard.active {
-    border: solid 2px rgb(43, 154, 113);;
+    border: solid 2px lightskyblue;
     color: black;
   }
   

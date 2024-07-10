@@ -7,7 +7,7 @@ import Signin from './components/auth/Signin';
 import UserProfile from './components/auth/UserProfile';
 import CreateBoard from './components/moodboard/CreateBoard';
 import Moodboard from './components/moodboard/Moodboard';
-import ShowObject from './components/moodboard/ShowObject';
+import EditBoard from './components/moodboard/EditBoard';
 import Footer from './components/common/Footer';
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
               <Route path="/:userId" element={<UserProfile />} />
               <Route path="/create" element={<CreateBoard />} />
               <Route path="/:userId/:boardId" element={<Moodboard />} />
-              <Route path="/:userId/:boardId/:objectId" element={<ShowObject />} />
+              <Route path="/:userId/:boardId/edit" element={<EditBoard />} />
             </Routes>
           </div>
         </div>
