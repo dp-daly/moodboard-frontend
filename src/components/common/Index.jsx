@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import AddToBoard from './AddToBoard.jsx';
 
-const Index = () => {
+function Index() {
   //! STATES
   const [art, setArt] = useState([]);
   const [selectedArtwork, setSelectedArtwork] = useState(null);

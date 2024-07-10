@@ -1,4 +1,4 @@
-const Card = ({ artist, title, image, handleSelectedArtwork}) => {
+function Card({ artist, title, image, handleSelectedArtwork}) {
 
     return (
     <div id="card">

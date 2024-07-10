@@ -1,4 +1,4 @@
-const Page = ({ page, total, updatePage }) => {
+function Page({ page, total, updatePage }) {
 
     return (
     <div className="page">

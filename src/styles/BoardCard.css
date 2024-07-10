@@ -1,0 +1,38 @@
+.board-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 38vh;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.board-card h4,
+.board-card p {
+    margin: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-footer {
+    margin: 15px 0px 0px 0px;
+    font-size: 14px;
+    height: auto;
+    text-align: center;
+}
+
+.card-footer button {
+    background-color: rgb(43, 154, 113);
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.card-footer button:hover {
+    background-color: rgb(33, 124, 93);
+}

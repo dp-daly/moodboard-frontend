@@ -1,8 +1,8 @@
-import '../../styles/BoardCard.css'
+import '../../styles/BoardCard.css'; 
 
 function BoardCard({ artobject, onDelete }) {
     return (
-        <li key={artobject.id}>
+        <div className="board-card">
             <h4>{artobject.title}</h4>
             <p>Artist: {artobject.artist}</p>
             <div 
@@ -11,8 +11,10 @@ function BoardCard({ artobject, onDelete }) {
                     backgroundImage: `url(https://www.artic.edu/iiif/2/${artobject.img}/full/843,/0/default.jpg)`,
                 }}
             ></div>
-            <button onClick={() => onDelete(artobject.id)}>Delete</button>
-        </li>
+            <div className="card-footer">
+                <button onClick={() => onDelete(artobject.id)}>Delete</button>
+            </div>
+        </div>
     );
 }
 

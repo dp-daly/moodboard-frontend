@@ -18,42 +18,42 @@ function EditBoard() {
         fetchBoard()
     }, [boardId])
 
-async function fetchBoard() {
-    try {
+    async function fetchBoard() {
+        try {
+            const token = localStorage.getItem('token')
+            const { data } = await axios.get(`http://localhost:8000/api/boards/${boardId}/`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            setFormData(data)
+        } catch (err) {
+            console.log(err.response.data)
+            toast.error("Cannot load this board's information.")
+        }
+    }
+
+    function handleChange(e) {
+        const newFormData = structuredClone(formData)
+        newFormData[e.target.name] = e.target.value
+        setFormData(newFormData)
+        }
+
+    async function handleSubmit(e) {
+        e.preventDefault()
         const token = localStorage.getItem('token')
-        const { data } = await axios.get(`http://localhost:8000/api/boards/${boardId}/`, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        })
-        setFormData(data)
-    } catch (err) {
-        console.log(err.response.data)
-        toast.error("Cannot load this board's information.")
+        try {
+            await axios.put(`http://localhost:8000/api/boards/${boardId}/`, formData, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            navigate('/')
+        } catch (err) {
+            console.log(err.response.data)
+            toast.error("Try again - something went wrong.")
+        }
     }
-}
-
-function handleChange(e) {
-    const newFormData = structuredClone(formData)
-    newFormData[e.target.name] = e.target.value
-    setFormData(newFormData)
-    }
-
-async function handleSubmit(e) {
-    e.preventDefault()
-    const token = localStorage.getItem('token')
-    try {
-        await axios.put(`http://localhost:8000/api/boards/${boardId}/`, formData, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        })
-        navigate('/')
-    } catch (err) {
-        console.log(err.response.data)
-        toast.error("Try again - something went wrong.")
-    }
-}
 
     return <div className="container">
             <form onSubmit={handleSubmit}>
