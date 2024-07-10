@@ -1,12 +1,12 @@
-import '../../styles/App.css'
+import '../../styles/App.css';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import BoardCard from './BoardCard';
 
 function Moodboard() {
 
     const navigate = useNavigate()
-
     const [moodboard, setMoodboard] = useState(null);
     const { boardId } = useParams()
 
@@ -34,7 +34,7 @@ async function handleBoardDelete() {
         console.log(err)
     }
 }
-    
+
 async function handleItemDelete(objectId) {
     try {
         const token = localStorage.getItem("token");
@@ -59,17 +59,11 @@ async function handleItemDelete(objectId) {
                     <h3>Art Objects:</h3>
                     <ul>
                         {moodboard.artobjects && moodboard.artobjects.map((artobject) => (
-                            <li key={artobject.id}>
-                                <h4>{artobject.title}</h4>
-                                <p>Artist: {artobject.artist}</p>
-                                <div 
-                                    id="img-placeholder" 
-                                    style={{ 
-                                        backgroundImage: `url(https://www.artic.edu/iiif/2/${artobject.img}/full/843,/0/default.jpg)`,
-                                    }}
-                                ></div>
-                                <button onClick={() => handleItemDelete(artobject.id)}>Delete</button>
-                            </li>
+                            <BoardCard
+                                key={artobject.id}
+                                artobject={artobject}
+                                onDelete={handleItemDelete}
+                            />
                         ))}
                     </ul>
                 </div>

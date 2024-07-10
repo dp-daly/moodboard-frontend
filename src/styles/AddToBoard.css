@@ -8,9 +8,7 @@
     height: 100%;
     width: 350px;
     background-color: black;
-    color: black;
     overflow: hidden;
-    border: solid 6px gold; 
     border-radius: 8px;
   }
   
