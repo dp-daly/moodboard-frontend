@@ -1,4 +1,4 @@
-import '../../styles/App.css'
+import '../../styles/Forms.css'
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
@@ -33,6 +33,8 @@ export default function Signin() {
     }
 
     return <div className="container">
+        <div className="authcontainer">
+        <div className="authbox">
             <form onSubmit={handleSubmit}>
                 <div className="field">
                     <label className="label">Email</label>
@@ -60,8 +62,12 @@ export default function Signin() {
                         />
                     </div>
                 </div>
+                <div className="submitbox">
                 <button className="button">Submit</button>
+                </div>
             </form>
+            </div>
+            </div>
             <ToastContainer
                 position="bottom-center"
                 autoClose={2000}

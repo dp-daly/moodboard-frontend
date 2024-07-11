@@ -8,7 +8,6 @@ function AddToBoard({ selectedArtwork, moodboards, selectedBoard, setSelectedBoa
   return (
     <div className="sidebar expanded">
       <div className="sidebar-contents">
-        {/* Planning notes: Toggles state of 'sidebarVisible' to false */}
       <div className="top-panel">
       <button className="close-sidebar" onClick={closeSidebar}>
           X

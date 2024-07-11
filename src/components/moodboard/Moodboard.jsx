@@ -7,7 +7,7 @@ import '../../styles/Moodboard.css';
 
 function Moodboard() {
     const navigate = useNavigate();
-    const [moodboard, setMoodboard] = useState(null);
+    const [moodboard, setMoodboard] = useState('');
     const [backgroundImageUrl, setBackgroundImageUrl] = useState('');
 
     const { boardId } = useParams();
@@ -61,10 +61,6 @@ function Moodboard() {
     function handleBackgroundImageSubmit(e) {
         e.preventDefault();
         localStorage.setItem(`backgroundImageUrl_${boardId}`, backgroundImageUrl);
-    }
-
-    if (!moodboard) {
-        return <p>Loading...</p>;
     }
 
     return (
