@@ -1,12 +1,12 @@
-import '../../styles/App.css';
-import '../../styles/Index.css';
+import '../../styles/App.css'
+import '../../styles/Index.css'
 import { useState, useEffect } from 'react';
 import Card from './Card.jsx';
-import Page from './Page.jsx';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
-import AddToBoard from './AddToBoard.jsx';
+import Page from './Page.jsx'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import axios from 'axios'
+import AddToBoard from './AddToBoard.jsx'
 
 function Index() {
   //! STATES

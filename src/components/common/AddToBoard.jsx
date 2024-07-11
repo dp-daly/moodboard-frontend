@@ -1,4 +1,4 @@
-import '../../styles/AddToBoard.css';
+import '../../styles/AddToBoard.css'
 
 function AddToBoard({ selectedArtwork, moodboards, selectedBoard, setSelectedBoard, handleAddToMoodboard, closeSidebar }) {
 

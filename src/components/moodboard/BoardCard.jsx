@@ -1,4 +1,4 @@
-import '../../styles/BoardCard.css'; 
+import '../../styles/BoardCard.css'
 
 function BoardCard({ artobject, onDelete }) {
     return (
