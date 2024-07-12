@@ -4,6 +4,8 @@ import axios from 'axios'
 import BoardCard from './BoardCard'
 import '../../styles/App.css'
 import '../../styles/Moodboard.css'
+import { baseUrl } from '../../config.js'
+
 
 function Moodboard() {
     const navigate = useNavigate();
@@ -23,7 +25,7 @@ function Moodboard() {
 
     async function fetchMoodboard() {
         try {
-            const response = await axios.get(`http://localhost:8000/api/boards/${boardId}/`);
+            const response = await axios.get(`${baseUrl}/api/boards/${boardId}/`);
             setMoodboard(response.data);
         } catch (error) {
             console.log('Error fetching moodboard:', error.message);
@@ -33,7 +35,7 @@ function Moodboard() {
     async function handleBoardDelete() {
         try {
             const token = localStorage.getItem("token");
-            await axios.delete(`http://localhost:8000/api/boards/${boardId}/`, {
+            await axios.delete(`${baseUrl}/api/boards/${boardId}/`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             navigate('/');
@@ -45,7 +47,7 @@ function Moodboard() {
     async function handleItemDelete(objectId) {
         try {
             const token = localStorage.getItem("token");
-            await axios.delete(`http://localhost:8000/api/boards/${boardId}/${objectId}/`, {
+            await axios.delete(`${baseUrl}/api/boards/${boardId}/${objectId}/`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchMoodboard();

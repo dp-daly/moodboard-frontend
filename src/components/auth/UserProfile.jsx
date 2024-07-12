@@ -3,6 +3,7 @@ import axios from 'axios'
 import { getPayload } from '../../lib/auth.js'
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { baseUrl } from '../../config.js'
 
 function UserProfile() {
 
@@ -17,7 +18,7 @@ function UserProfile() {
     async function fetchUserBoards() {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:8000/api/boards/', {
+            const response = await axios.get(`${baseUrl}/api/boards/`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

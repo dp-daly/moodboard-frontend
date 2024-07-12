@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { baseUrl } from '../../config.js'
 
 function EditBoard() {
     const { boardId } = useParams()  
@@ -21,7 +22,7 @@ function EditBoard() {
     async function fetchBoard() {
         try {
             const token = localStorage.getItem('token')
-            const { data } = await axios.get(`http://localhost:8000/api/boards/${boardId}/`, {
+            const { data } = await axios.get(`${baseUrl}/api/boards/${boardId}/`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -43,7 +44,7 @@ function EditBoard() {
         e.preventDefault()
         const token = localStorage.getItem('token')
         try {
-            await axios.put(`http://localhost:8000/api/boards/${boardId}/`, formData, {
+            await axios.put(`${baseUrl}/api/boards/${boardId}/`, formData, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

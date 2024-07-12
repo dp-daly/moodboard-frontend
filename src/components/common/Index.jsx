@@ -7,6 +7,8 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import axios from 'axios'
 import AddToBoard from './AddToBoard.jsx'
+import { baseUrl } from '../../config.js'
+
 
 function Index() {
   //! STATES
@@ -47,7 +49,7 @@ function Index() {
   async function fetchUserBoards() {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:8000/api/boards/', {
+      const response = await axios.get(`${baseUrl}/api/boards/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -67,7 +69,7 @@ function Index() {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:8000/api/artobjects/',
+        `${baseUrl}/api/artobjects/`,
         { //DEFINING THE SPECIFIC OBJECT FORMAT I WANT TO PASS TO BACKEND TO MATCH MODEL
           title: selectedArtwork.title,
           artist: selectedArtwork.artist,
